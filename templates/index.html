@@ -1,0 +1,268 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typemit-test your typing speed</title>
+
+   <!-- CSS CUSTOM -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- font awsome icons  -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" ></script> -->
+
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+
+</head>
+
+<body>
+
+   {% for message in messages %}
+   <div class="alert alert-{{message.tags}} alert-dismissaable fade show" role="alert">
+    <strong>message:</strong>{{message}}
+    <button type="button " class="close" data-dismiss="alert" aria-label="close" >
+    <span aria-hidden = "true">&times;</span>
+     </button>
+   </div>
+
+   {% endfor %}
+  
+
+    <section id="nav-bar">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png'%}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+
+
+                <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href=" #top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Faq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">LogIn</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">SignUp</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+    </section>
+
+
+    {% comment %} <!--                           banner section                       --> {% endcomment %}
+
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/test"><p class="promo-title">TYPING SPEED TEST </p></a>
+                    <p class="sub-title">The 10 finger method is a very established technique to efficiently use your computer keyboard. With some practice and the correct finger positions you can type „blindly“ on the keyboard. If you have it down, you can significantly lower your error rate and increase your typing speed at the same time.</p>
+
+                    <a href="/test"><img src="{% static 'images/play.png'%}" class="play-btn">Start Test</a>
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/home2.png'%}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <img src="{% static 'images/wave1.png'%}" class="bottom-img">
+
+    </section>
+
+
+
+    {% comment %} <!--                    services section                             --> {% endcomment %}
+
+    <section id="services">
+        <div class="container text-center">
+            <h1 class="title">CLEAR YOUR DOUBTS</h1>
+            <div class="row text-center">
+                
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services1.png'%}" class="service-img" alt="">
+                    <h4>Word per Minute (WPM) Typing Test</h4>
+                    <p>What is the WPM typing test? There are different types of tests for typing. This one is a typing test that expresses your typing skills in words per minute. The more you practice typing, and the more you test your typing speed, the higher your WPM score will be. Some online typing tests and typing test games focus only on WPM typing. The disadvantage of the WPM typing test is that you are only learning how to type fast. WPM typing tests do not show your accuracy.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services4.png'%}" class="service-img" alt="">
+                    <h4>How Can You Upgrade Your Typing Skills?</h4>
+                    <p>Practice typing as much as you can. Type a lot, type tests, and practice typing tests. Improve your words per minute typing results, and test your typing speed often. Our typing speed test will keep track of all typing tests that you’ve taken in the past so you will be able to see the improvements over time. You will be able to see how your speed typing has changed. If you can do a five-minute typing test every day, your typing skills will increase dramatically.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services3.png'%}" class="service-img" alt="">
+                    <h4>Why Is Typing Speed Important to Everyone?</h4>
+                    <p>The faster you type, the faster you will be able to communicate with others. You will be able to save a ton of time on any kind of work that requires typing. At first, it will be a couple of extra minutes that you won’t really notice. Over time, the minutes will turn into hours of saved time that you can spend on other activities.</p>
+                </div>
+
+
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services1.png'%}" class="service-img" alt="">
+                    <h4>What Is the Average Typing Speed?</h4>
+                    <p>The average person types between 38 and 40 words per minute (WPM). That translates into between 190 and 200 characters per minute (CPM). However, professional typists type a lot faster, averaging between 65 and 75 WPM.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services4.png'%}" class="service-img" alt="">
+                    <h4>What Is CPM and How Can You Calculate It?</h4>
+                    <p>The CPM stands for the number of characters you type per minute, including all the mistakes. “Corrected” scores count only correctly typed words. WPM is just the corrected CPM divided by five. This is the de facto international standard.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="{% static 'images/services3.png'%}" class="service-img" alt="">
+                    <h4>How Many Words per Minute Is a Good Score?</h4>
+                    <p>An average professional typist usually types around 65 to 75 WPM. More advanced positions require 80 to 95 (this is typically the minimum required for dispatch positions and other time-sensitive typing jobs). There are also some advanced typists whose work requires speeds above 120 WPM.</p>
+                </div>
+
+
+
+
+            </div>
+            <a href="#feedback"><button type="button" class="btn btn-primary">Explore Games</button></a>
+        </div>
+    </section>
+
+
+    {% comment %} <!--                                 about us section                           --> {% endcomment %}
+
+
+    <section id="about-us">
+        <div class="container ">
+            <h1 class=" title text-center "> WHY CHOOSE US ?</h1>
+
+            <div class="row">
+                <div class="col-md-6 about-us">
+                    <p class="about-title">Why we're different ?</p>
+                    <ul>
+                        <li>Believe in doing business with honesty</li>
+                        <li>Believe in doing business with honesty</li>
+                        <li>Believe in doing business with honesty</li>
+                        <li>Believe in doing business with honesty</li>
+                        <li>Believe in doing business with honesty</li>
+                        <li>Believe in doing business with honesty</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/network.png'%}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% comment %} <!--                      testimonials section                      --> {% endcomment %}
+
+
+<section id="feedback">
+    <div class="container ">
+        <h1 class=" title text-center "> Explore Our Games </h1>
+        <div class="row offset-1">
+            <div class="col-md-5 feedback">
+                <p>Letter Crasher is a game in which you have to press the key on keyboard for the word which is comming ear to your targe . If you are unable to Crash the word by pressing the right key you will loose the game . </p>
+             <a href="/game-letter-crasher">   <img src="{% static 'images/game1.png'%}"> </a>
+             <p class="user-details"> <a href="/game-letter-crasher">  <b>Letter Crasher</b> </a> <br>play and enjoy for free</p> 
+            </div>
+
+            <div class="col-md-5 feedback">
+                <p>Word Scramble is a game in which you have to find th correct word by the hint given to you . if you choose the correct word your score will ncrease if word choosen by you is wrong then refrest the game to get next word</p>
+                <a href="/game-word-scramble"><img src="{% static 'images/game3.png'%}"></a> 
+                <p class="user-details"><a href="/game-word-scramble"> <b>Word Scramble</b> </a> <br>play and enjoy for free</p>
+            </div>
+            
+        </div>
+
+
+    </div>
+</section>
+
+
+
+{% comment %} <!--                     social media section                  --> {% endcomment %}
+
+<section id="social-media">
+    <div class="container text-center">
+        <p>FIND US ON SOCIAL MEDIA </p>
+    </div>
+    <div class="social-icons text-center">
+        <a href="#"><img src="{% static 'images/facebook-icon.png'%}" alt=""></a>
+        <a href="#"><img src="{% static 'images/linkedin-icon.png'%}" alt=""></a>
+        <a href="#"><img src="{% static 'images/instagram-icon.png'%}" alt=""></a>
+        <a href="#"><img src="{% static 'images/snapchat-icon.png'%}" alt=""></a>
+    </div>
+</section>
+
+
+                  {% comment %} <!--                    footer section                             --> {% endcomment %}
+
+
+    <section id="footer">
+        <img src="{% static 'images/wave2.png'%}" class="footer-img" alt="">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="{% static 'images/logo.png'%}" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis commodi impedit dicta sunt enim molestias quia aliquid exercitationem! Est ea facilis accusamus eos aliquid magnam laboriosam non cupiditate numquam voluptatem?</p>
+                 </div>
+                 <div class="col-md-4 footer-box">
+                    <p><b>Contact Us</b></p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>MIT-ADT University , Lonikalbor</p>
+                    <p><i class="fa fa-phone" ></i>+91 83674 93849</p>
+                    <p><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; typers@gmail.com</p>
+                 </div>
+                 <div class="col-md-4 footer-box">
+                    <p><b>SUBSCRIBE FOR UPDATES</b></p>
+                    <input type="email" class="form-control" placeholder="your Email">
+                    <button type="button" class="btn btn-primary ">Subscribe</button>
+                    
+                 </div>
+            </div>
+            <hr>
+            <p class="copyright">copyright &#169; : 2022 by <span>MITSOE mini Project</span></p>
+        </div>
+    </section>
+
+
+    {% comment %} <!--                          smooth scroll                             --> {% endcomment %}
+
+
+    <script src="smooth-scroll.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+</body>
+
+</html>

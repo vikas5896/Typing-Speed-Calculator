@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/difficulty.css' %}">
+<div class="text-center">
+<div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-auto rounded-3 shadow overflow-hidden w-280px position-absolute top-50 start-50 translate-middle"  style="width: 280px;">
+  {% comment %} <form class="p-20 mb-40 bg-dark border-bottom border-dark">
+    <input typesearch" class="form-control form-control-dark" autocomplete="false" placeholder="Type to filter...">
+  </form> {% endcomment %}
+  <ul class="list-unstyled">
+    <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+      {% comment %} <span class="d-inline-block bg-danger rounded-circle p-1"></span> {% endcomment %}
+      Select Difficulty Level
+    </a></li>
+    
+    <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/easy-test">
+      <span class="d-inline-block bg-success rounded-circle p-1"></span>
+      Easy
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/moderate-test">
+      <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+      Moderate
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/hard-test">
+      <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+      Hard
+    </a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+{% endblock body %}
